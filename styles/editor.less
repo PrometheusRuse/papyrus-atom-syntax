@@ -1,0 +1,71 @@
+@import "syntax-variables";
+@import "colors";
+
+.atom-text-editor,
+:host {
+    background-color: @syntax-background-color;
+    color: @syntax-gutter-text-color;
+}
+
+.atom-text-editor,
+:host {
+    background-color: @syntax-background-color;
+    color: @syntax-gutter-text-color;
+    .wrap-guide {
+        background: @syntax-wrap-guide-color;
+    }
+    .indent-guide {
+        color: @syntax-indent-guide-color;
+    }
+    .invisible-character {
+        color: @syntax-invisible-character-color;
+    }
+    .gutter {
+        background-color: @syntax-gutter-background-color;
+        color: @syntax-gutter-text-color;
+        .line-number {
+            background: @syntax-gutter-background-color;
+            color: @syntax-gutter-text-color;
+            padding-left: 10px;
+            font-size: 0.75em;
+            &.cursor-line {
+                background-color: @syntax-selection-color;
+                color: @syntax-gutter-text-color-selected;
+                font-weight: 100;
+            }
+            &.cursor-line-no-selection {
+                background-color: @syntax-gutter-background-color-selected;
+                color: @syntax-gutter-text-color;
+                font-weight: bold;
+            }
+        }
+        .line-number:hover {
+            background-color: @syntax-gutter-background-color;
+            color: @syntax-gutter-text-color;
+        }
+    }
+    .gutter .line-number.folded,
+    .gutter .line-number:after,
+    .fold-marker:after {
+        color: @accent-hue;
+        background: @syntax-gutter-text-color;
+    }
+    .invisible {
+        color: @invisible;
+    }
+    .cursor {
+        border-color: @syntax-gutter-text-color;
+        border-left: solid @cursor-width;
+    }
+    .selection .region {
+        // background-color: @selected-line;
+        // border: solid 1px @selected-border;
+        background-color: @selected;
+    }
+    .scroll-view {
+        padding-left: 10px;
+    }
+    .line.cursor-line {
+        background: @selected-line;
+    }
+}

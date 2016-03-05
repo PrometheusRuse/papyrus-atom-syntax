@@ -1,0 +1,39 @@
+@import "colors";
+
+.source.json {
+    .constant.language {
+        color: @constant;
+    }
+    .meta.structure.dictionary.json {
+        .string.quoted.json {
+            color: @string;
+        }
+        .meta.structure.dictionary.value.json {
+            // background-color: @gutter-background;
+            .string.quoted.json {
+                color: @string;
+                .punctuation.definition.string {
+                    color: @punctuation;
+                }
+            }
+            .meta.structure.dictionary.json {
+                // background-color: @meta;
+                .string.quoted.json {
+                    color: @string;
+                    .punctuation.definition.string {
+                        color: @punctuation;
+                    }
+                }
+                .meta.structure.dictionary.value.json {
+                    // background-color: @syntax-gutter-background-color;
+                    .string.quoted.json {
+                        color: @string;
+                        .punctuation.definition.string {
+                            color: @punctuation;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
