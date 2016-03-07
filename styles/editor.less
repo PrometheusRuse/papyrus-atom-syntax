@@ -23,25 +23,20 @@
     .gutter {
         background-color: @syntax-gutter-background-color;
         color: @syntax-gutter-text-color;
+
         .line-number {
             background: @syntax-gutter-background-color;
             color: @syntax-gutter-text-color;
-            padding-left: 10px;
             font-size: 0.75em;
-            &.cursor-line {
-                background-color: @syntax-selection-color;
-                color: @syntax-gutter-text-color-selected;
-                font-weight: 100;
-            }
-            &.cursor-line-no-selection {
+            padding-left: 10px;
+            font-weight:  600;
+
+            &.cursor-line,
+            &.cursor-line-no-selection  {
                 background-color: @syntax-gutter-background-color-selected;
-                color: @syntax-gutter-text-color;
-                font-weight: bold;
+                color: @syntax-gutter-text-color-selected;
+                font-weight:  900;
             }
-        }
-        .line-number:hover {
-            background-color: @syntax-gutter-background-color;
-            color: @syntax-gutter-text-color;
         }
     }
     .gutter .line-number.folded,
@@ -58,9 +53,7 @@
         border-left: solid @cursor-width;
     }
     .selection .region {
-        // background-color: @selected-line;
-        // border: solid 1px @selected-border;
-        background-color: @selected;
+        background-color: @syntax-selection-color;
     }
     .scroll-view {
         padding-left: 10px;
